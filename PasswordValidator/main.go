@@ -18,9 +18,9 @@ func (l MinimumLengthRule) Check(password string) bool {
 	return false
 }
 
-type CapitalLetterRule struct{}
+type ContainsNumberRule struct{}
 
-func (l CapitalLetterRule) Check(password string) bool {
+func (l ContainsNumberRule) Check(password string) bool {
 	const NUMBERS = "123456789"
 	if strings.ContainsAny(password, NUMBERS) {
 		return true
@@ -32,7 +32,7 @@ func (l CapitalLetterRule) Check(password string) bool {
 func main() {
 
 	input := "hello1"
-	rules := []PasswordRule{MinimumLengthRule{}, CapitalLetterRule{}}
+	rules := []PasswordRule{MinimumLengthRule{}, ContainsNumberRule{}}
 
 	for _, rule := range rules {
 		fmt.Println(rule.Check(input))
