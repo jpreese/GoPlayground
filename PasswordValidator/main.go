@@ -20,7 +20,7 @@ func (l MinimumLengthRule) Check(password string) bool {
 
 type ContainsNumberRule struct{}
 
-func (l ContainsNumberRule) Check(password string) bool {
+func (n ContainsNumberRule) Check(password string) bool {
 	const NUMBERS = "123456789"
 	if strings.ContainsAny(password, NUMBERS) {
 		return true
