@@ -2,19 +2,16 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 func main() {
 
-	var input string
+	var choice int
 
 	for {
 
 		fmt.Print("your choice: ")
-		fmt.Scanln(&input)
-
-		choice, _ := strconv.Atoi(input)
+		fmt.Scanln(&choice)
 
 		if choice == 1 {
 			fmt.Println("your number was 1")
